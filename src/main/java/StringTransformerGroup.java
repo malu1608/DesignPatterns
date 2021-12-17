@@ -1,13 +1,14 @@
 import java.util.List;
 
-public class StringRecipe{
+public class StringTransformerGroup implements StringTransformer{
     public List<StringTransformer> transformerList;
 
-    public StringRecipe(List<StringTransformer> t) {
+    public StringTransformerGroup(List<StringTransformer> t) {
         transformerList = t;
     }
-
-    public void mix(StringDrink drink) {
+    @Override
+    public void execute(StringDrink drink)
+    {
         int i =0;
         while(i != transformerList.size()){
             StringTransformer transformer = transformerList.get(i);
@@ -15,5 +16,4 @@ public class StringRecipe{
             i++;
         }
     }
-
 }
