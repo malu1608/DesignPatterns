@@ -14,7 +14,6 @@ public class HumanClient implements Client {
     @Override
     public void wants(StringDrink drink, StringRecipe recipe, StringBar bar) {
         if (bar.isHappyHour())
-            //observers.addObserver(humanClient);
-        recipe.mix(drink);
+            recipe.mix(drink);
     }
 }

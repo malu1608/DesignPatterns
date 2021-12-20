@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-/*
+
 public class VerifyObserverTest {
     @Test
     public void addObserver() {
@@ -29,4 +29,3 @@ public class VerifyObserverTest {
     }
 
 }
-*/

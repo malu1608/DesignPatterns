@@ -1,15 +1,20 @@
+import java.util.ArrayList;
 import java.util.List;
 
 abstract class Bar {
-
-    public Bar bar;
     public List<BarObserver> observers;
-    public BarObserver(List<BarObserver> a){
-        observers = a;
+    public Bar bar;
+    public Bar() {
+        this.observers = new ArrayList<>();
     }
-    public abstract boolean isHappyHour(); //abstract significa que metodo existe mas esta implemnetado noutra classe
+    public Bar(List<BarObserver> observers) {
+        this.observers = observers;
+    }
+
+
+    public abstract boolean isHappyHour(); //abstract significa que metodo existe mas esta implementado noutra classe
     public abstract void startHappyHour();
-    public abstract void endHappyHour();
+    public  abstract void endHappyHour();
 
     public void addObserver(BarObserver observer) {
         observers.add(observer);
